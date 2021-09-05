@@ -1,0 +1,19 @@
+.nav-list{
+    cursor: pointer;
+}
+.little-input{
+    height:30px;
+    border:2px solid #C2D7FB;
+    outline: none;
+    border-radius: 10px;
+    width: 144px;
+    padding: 0;
+    
+}
+.bg{
+    background-image: url("./assets/bg.png");
+    background-size:400px;
+}
+.nav-link{
+    text-decoration: none;
+}
