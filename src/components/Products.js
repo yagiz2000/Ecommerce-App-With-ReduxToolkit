@@ -2,12 +2,17 @@ import "./styles/Products.scss";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsFromDatabase } from "../features/products/productsSlice";
+import {addProductToCart,saveProductsToLocalStorage} from "../features/cart/cartSlice";
 const Products = () => {
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
   useEffect(() => {
     dispatch(getProductsFromDatabase());
   }, [dispatch]); //Sadece dispatch değiştiğinde çalış
+  const addToCart = (product)=>{
+      dispatch(addProductToCart(product));
+      dispatch(saveProductsToLocalStorage());
+  }
   return (
     <div className="product-wrapper">
       {products.map((item) => (
@@ -24,7 +29,7 @@ const Products = () => {
           </div>
           <div className="product-price">{item.price}</div>
           <div className="product-buttons">
-            <button className="product-button">Sepete Ekle</button>
+            <button onClick={()=>addToCart(item)} className="product-button">Add To Cart</button>
           </div>
         </div>
       ))}

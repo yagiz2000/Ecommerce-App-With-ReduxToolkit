@@ -17,3 +17,6 @@
 .nav-link{
     text-decoration: none;
 }
+.nav-link.active{
+    color: red;
+}

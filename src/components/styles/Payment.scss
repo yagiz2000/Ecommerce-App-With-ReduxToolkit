@@ -1,0 +1,17 @@
+$blue:#6C98E3;
+.button{
+    cursor:pointer;
+    width:100%;
+    color:$blue;
+    border:none;
+    height:50px;
+    background-color: white;
+    border: 2px solid $blue;
+    border-radius:10px;
+    font-size:20px;
+    transition: 0.4s;
+    &:hover{
+        color: white;
+        background-color: $blue;
+    }
+}
