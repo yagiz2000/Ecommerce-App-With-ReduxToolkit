@@ -1,6 +1,5 @@
 import React from 'react';
 
-let imgUri = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAMakJ1GXEL3wmQARrK-6kbDz4WvjkH9VG5g&usqp=CAU"
 function Payment() {
 
   return (

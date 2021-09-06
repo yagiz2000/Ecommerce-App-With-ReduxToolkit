@@ -1,0 +1,52 @@
+.cart-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cart-item{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        .item-rect{
+            padding: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #E5E9EA;
+            width: 500px;
+            .img-box{
+                img{
+                    width: 100px;
+                    object-fit:contain;
+                }
+            }
+            .add-drop-box{
+                button{
+                    background-color: #858482;
+                    color: white;
+                    border: none;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    font-size: 25px;
+                    padding: 0px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                #plusBtn{
+                    margin-right: 10px;
+
+                }
+                
+            }
+        }
+        .cancel-box{
+            width: 50px;
+            position: relative;
+            i{
+                cursor: pointer;
+                position: absolute;
+                top: 80px;
+            }
+        }
+    }
+
+}
