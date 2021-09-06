@@ -1,11 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { changeQuantityOfProduct, removeProductFromCart, saveProductsToLocalStorage } from "../features/cart/cartSlice";
 import "./styles/Cart.scss";
+import { changeNavLinkIndex } from "../features/header/headerSlice";
 const Cart = () => {
+   
   const { cartList } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(changeNavLinkIndex(2))    
+    },[]);
+
   const handleChangeInQuantity=(type,id)=>{
     dispatch(changeQuantityOfProduct({type,id}))
     dispatch(saveProductsToLocalStorage());
@@ -29,12 +35,14 @@ const Cart = () => {
         let last = list.join("")+" TL";
         return last;
   }
+  console.log(cartList.length);
   const subTotal = useMemo(()=>{
       return calculateSubTotal()
   },[cartList])
   return (
     <div className="cart-wrapper">
-      {cartList.map((item) => {
+
+      {cartList.length===0 ? <h2>Your cart is empty</h2> : cartList.map((item) => {
         return (
           <div className="cart-item">
             <div className="item-rect">
@@ -61,7 +69,7 @@ const Cart = () => {
           </div>
         );
       })}
-      <div className="cost-box">
+      { cartList.length===0 ? <div></div>:<div className="cost-box">
         <div className="back-button">
             <Link to="/products">Alışverişe dön</Link>
         </div>
@@ -69,7 +77,7 @@ const Cart = () => {
             <h3>Subtotal</h3>
             <p>{subTotal}</p>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };

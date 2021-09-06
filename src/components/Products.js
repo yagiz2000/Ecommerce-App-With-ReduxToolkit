@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsFromDatabase } from "../features/products/productsSlice";
 import {addProductToCart,saveProductsToLocalStorage} from "../features/cart/cartSlice";
+import { changeNavLinkIndex } from "../features/header/headerSlice";
 const Products = () => {
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
   useEffect(() => {
     dispatch(getProductsFromDatabase());
   }, [dispatch]); //Sadece dispatch değiştiğinde çalış
+  useEffect(()=>dispatch(changeNavLinkIndex(1)),[]);
   const addToCart = (product)=>{
       dispatch(addProductToCart(product));
       dispatch(saveProductsToLocalStorage());

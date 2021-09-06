@@ -1,0 +1,13 @@
+[debug] [2021-09-06T14:47:17.537Z] ----------------------------------------------------------------------
+[debug] [2021-09-06T14:47:17.538Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\yagiz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-09-06T14:47:17.539Z] CLI Version:   9.6.1
+[debug] [2021-09-06T14:47:17.539Z] Platform:      win32
+[debug] [2021-09-06T14:47:17.539Z] Node Version:  v14.15.0
+[debug] [2021-09-06T14:47:17.547Z] Time:          Mon Sep 06 2021 17:47:17 GMT+0300 (GMT+03:00)
+[debug] [2021-09-06T14:47:17.547Z] ----------------------------------------------------------------------
+[debug] [2021-09-06T14:47:17.547Z] 
+[debug] [2021-09-06T14:47:17.553Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-06T14:47:17.553Z] > authorizing via signed-in user
+[debug] [2021-09-06T14:47:17.553Z] [iam] checking project react-cart-8acbb for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-09-06T14:47:17.555Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/react-cart-8acbb:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}

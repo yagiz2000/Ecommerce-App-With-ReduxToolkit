@@ -1,12 +1,14 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import { useDispatch } from 'react-redux';
 import "./styles/Payment.scss";
 import {addProductToDatabase} from "../features/products/productsSlice";
+import { changeNavLinkIndex } from '../features/header/headerSlice';
 function Payment() {
   let [productTitle,setProductTitle] = useState("");
   let [productPrice,setProductPrice] = useState("");
   let [productUrl,setProductUrl] = useState("");
   let dispatch = useDispatch();
+  useEffect(()=>dispatch(changeNavLinkIndex(0)),[])
   const setInputsEmpty = ()=>{
       setProductPrice("");
       setProductTitle("");
