@@ -1,7 +1,6 @@
 import firebase from "firebase";
-import counterSlice from "../features/counter/counterSlice";
 const firebaseConfig = {
-    apiKey: "AIzaSyDzv4cVSCZQ1_MJUUNYVKZOvq4ZR7SZ2AA",
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: "react-cart-8acbb.firebaseapp.com",
     projectId: "react-cart-8acbb",
     storageBucket: "react-cart-8acbb.appspot.com",
