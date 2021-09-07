@@ -35,13 +35,11 @@ const Cart = () => {
         let last = list.join("")+" TL";
         return last;
   }
-  console.log(cartList.length);
   const subTotal = useMemo(()=>{
       return calculateSubTotal()
   },[cartList])
   return (
     <div className="cart-wrapper">
-
       {cartList.length===0 ? <h2>Your cart is empty</h2> : cartList.map((item) => {
         return (
           <div className="cart-item">
@@ -69,7 +67,7 @@ const Cart = () => {
           </div>
         );
       })}
-      { cartList.length===0 ? <div></div>:<div className="cost-box">
+      { cartList.length===0? <div></div>:<div className="cost-box">
         <div className="back-button">
             <Link to="/products">Alışverişe dön</Link>
         </div>
