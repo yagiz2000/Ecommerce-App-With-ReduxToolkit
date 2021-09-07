@@ -10,6 +10,6 @@ https://react-cart-8acbb.web.app/
 This repo aims to represent my redux toolkit learning journey.
 
 ## Technologies
-HTML,CSS,SCSS,React,Firebase
+HTML,CSS,SCSS,React,Firebase (no css framework)
 
 
